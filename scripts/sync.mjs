@@ -1,4 +1,4 @@
-// Copies the project pages, screenshots, logo and version from the imghost repository into this site, so they
+// Copies the project pages, screenshots, logo, OpenAPI description and version from the imghost repository into this site, so they
 // have one source: those files change together with the code, and this script brings them here. Run it after an
 // imghost change:
 //
@@ -77,6 +77,8 @@ const shots = (ref
 fs.mkdirSync(path.join(site, "public", "screenshots"), { recursive: true })
 for (const file of shots) fs.writeFileSync(path.join(site, "public", "screenshots", file), read(`assets/screenshots/${file}`))
 fs.writeFileSync(path.join(site, "public", "logo.svg"), read("assets/logo.svg"))
+// The OpenAPI description, downloadable from the site as it is from every installation.
+fs.writeFileSync(path.join(site, "public", "openapi.json"), read("frontend/public/openapi.json"))
 
 // The version comes from imghost itself. It is released when imghost's main branch on GitHub has it (or a later
 // one); the production build refuses to publish documentation of an unreleased version (scripts/check-release.mjs).

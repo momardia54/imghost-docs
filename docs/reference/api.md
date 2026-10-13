@@ -2,6 +2,10 @@
 
 The web app uses this API, and you can too. All endpoints are under the Worker's address.
 
+::: tip OpenAPI
+Every installation serves an OpenAPI 3.1 description of this API at `/openapi.json`, for client generators, Postman, Insomnia or any OpenAPI viewer. The description of the current version is also <a href="/openapi.json" target="_blank">available here</a>.
+:::
+
 ## Authentication
 
 | Method | Used for | How |

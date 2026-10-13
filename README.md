@@ -7,7 +7,7 @@ The documentation website of [imghost](https://github.com/momardia54/imghost), b
 | Pages | Source |
 |---|---|
 | Home, introduction, getting started, deployment, configuration, upgrading, local development, guides, HTTP API, architecture | This repository, `docs/` |
-| Security, roadmap, changelog, license, screenshots, logo, version | The imghost repository (root files and `assets/`), copied by `npm run sync` |
+| Security, roadmap, changelog, license, screenshots, logo, OpenAPI description, version | The imghost repository (root files, `assets/`, `frontend/public/openapi.json`), copied by `npm run sync` |
 
 A synced page starts with a comment naming its source; edit it there, never here.
 
