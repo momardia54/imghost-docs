@@ -1,0 +1,19 @@
+{
+  "name": "imghost-docs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Documentation website of imghost, the self-hosted image host for Cloudflare Workers.",
+  "license": "MIT",
+  "scripts": {
+    "sync": "node scripts/sync.mjs",
+    "sync:release": "node scripts/sync.mjs --release",
+    "dev": "vitepress dev docs",
+    "build": "node scripts/check-release.mjs && vitepress build docs",
+    "preview": "vitepress preview docs",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "vitepress": "1.6.4"
+  }
+}
